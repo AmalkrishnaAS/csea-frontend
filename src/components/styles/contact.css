@@ -1,0 +1,116 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.wrapper
+{
+    background:rgb(204, 181, 235);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: pink;
+
+
+}
+.contact-box
+{
+    display: flex;
+   
+    height: 70%;
+    margin: 23px;
+    width: 80vw;
+    border-radius: 10px;
+  
+
+}
+.img
+{
+    width: 40%;
+    background-image: linear-gradient( to right bottom, rgba(0,0,0,0.89),rgba(0,0,0,0.5)),url('https://source.unsplash.com/random/1920x1080/?programming,coding');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px 0px 0px 10px;
+    position:  relative;
+
+    
+   
+   
+   
+}
+.img h1
+{
+    color: white;
+    -webkit-text-stroke: rgb(175, 18, 175) 3px;
+    font-size: 2.5rem;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+
+
+}
+.content
+{
+    width: 50%;
+    background: linear-gradient(to right top, rgba(0,0,0.9),rgba(0,0,0.7),rgb(175, 18, 175));
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    border-radius: 0px 10px 10px 0px;
+    justify-content: center;
+   
+   
+
+
+    
+}
+.content h1
+{
+    padding: 13px;
+    display: none;
+}
+.content p
+{
+    padding: 30px;
+    line-height: 1.7;
+}
+@media only screen and (max-width: 700px) {
+    .content
+    {
+        width: 100%;
+        border-radius: 10px;
+        justify-content: center;
+        line-height: 1.7;
+        text-align: center;
+        font-size: 1.2rem;
+
+    }
+    .content h1
+    {
+        justify-self: flex-start;
+        margin-bottom: 13px;
+        display: block;
+
+    }
+    .img
+    {
+        display: none;
+    }
+    .content h1
+    {
+        font-size: 1.5rem;
+
+    }
+    .content p
+    {
+        font-size: 1.1rem;
+    }
+}

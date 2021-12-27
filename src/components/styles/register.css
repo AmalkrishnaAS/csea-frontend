@@ -1,0 +1,79 @@
+.register-body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container-reg
+{
+    background-color: white;
+    
+    width: 80vw;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+   
+    text-align: center;
+    max-width: 700px;
+
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.input
+{
+    width: 70%;
+    padding: 5px 13px;
+    border-radius: 7px;
+    border: 2px solid rgb(221, 199, 199);
+
+}
+.input:focus
+{
+    outline: none;
+}
+
+.select
+{
+    border: none;
+}
+.radio
+{
+    margin-left: 20px;
+    
+}
+.label
+{
+    margin-left: 20px;
+}
+.radio-group
+{
+   padding: 20px;
+   border: 2px solid rgb(175, 18, 175);
+   column-gap: 20px;
+
+}
+.btn
+{
+    padding: 10px 20px;
+    background-color:  rgb(175, 18, 175);
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(148, 9, 148);
+
+}
