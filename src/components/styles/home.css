@@ -139,6 +139,11 @@ body
     }
     .item
     {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    .timer-box
+    {
+        width: 70px;
+        padding: 4px;
     }
 }
