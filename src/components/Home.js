@@ -93,7 +93,7 @@ const Home = () => {
          
         </div>
         <div className="entries">
-            <h1 className='heading-secondary'>Registerations</h1>
+            <h1 className='heading-secondary'>Registrations</h1>
             <div className="box">
                 <ul className="list">
                    {res.map((item,key)=>{
