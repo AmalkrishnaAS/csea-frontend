@@ -36,7 +36,7 @@ const Register = () => {
         branch:'Select Branch',
         mobile:null,
         email:'',
-        sex:''
+        sex:'nil'
         
         
         })
@@ -71,6 +71,20 @@ console.log(forminput);
                     progress: undefined,
                     });
             }
+            else if(forminput.branch==='Select Branch')
+            {
+                toast.error('Select Branch' , {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
+            }
+            else
+            {
             try {
                 const resp = await axios.post('https://codeinit-reg.herokuapp.com/reg', forminput);
                 console.log(resp.data);
@@ -98,6 +112,7 @@ console.log(forminput);
                     progress: undefined,
                     });
             }
+        }
          
             
         }
@@ -106,12 +121,12 @@ console.log(forminput);
            <div className="container-reg">
            <h1>Register Now!</h1>
            <form  onSubmit={handlesubmit}>
-           <input  className='input'type="text" name="name" id="name" placeholder='Name' onChange={handlechange}/>
-               <input  className='input'type="text" name="rollno" id="rollno" placeholder='Roll No' minLength={9} maxLength={9} onChange={handlechange}/>
+           <input  className='input'type="text" name="name" id="name" placeholder='Name' onChange={handlechange} required='required'/>
+               <input  className='input'type="text" name="rollno" id="rollno" placeholder='Roll No' minLength={9} maxLength={9} onChange={handlechange} required='required'/>
                <label htmlFor="dob">DoB:</label>
-               <input className='input' type="date" name="dob" id="dob" placeholder='DoB' onChange={handlechange} max='2003-12-27' min='2000-12-28' />
-                <input className='input' type="Phone" minLength={10} maxLength={10} placeholder='Phone' onChange={handlechange} name='mobile' />
-                <input type="email" name="email" id="email" className='input' placeholder='Email' onChange={handlechange} />
+               <input className='input' type="date" name="dob" id="dob" placeholder='DoB' onChange={handlechange} max='2003-12-27' min='2000-12-28' required='required' />
+                <input className='input' type="Phone" minLength={10} maxLength={10} placeholder='Phone' onChange={handlechange} name='mobile' required='required' />
+                <input type="email" name="email" id="email" className='input' placeholder='Email' onChange={handlechange} required='required' />
                 <Select options={options} className='input select' placeholder={forminput.branch} name='branch' onChange={handleselect} ></Select>
 
                     <label htmlFor="Sex">Sex:<br/></label>
